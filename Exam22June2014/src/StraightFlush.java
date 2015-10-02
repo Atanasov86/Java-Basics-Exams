@@ -7,10 +7,14 @@ public class StraightFlush {
         String[] inputCards = inputCardLine.split("[,\\s]+");
         boolean isExistStraightFlush = false;
         for (int card1 = 0; card1 < inputCards.length; card1++) {
-            for (int card2 = card1 + 1; card2 < inputCards.length; card2++) {
-                for (int card3 = card2 + 1; card3 < inputCards.length; card3++) {
-                    for (int card4 = card3 + 1; card4 < inputCards.length; card4++) {
-                        for (int card5 = card4 + 1; card5 < inputCards.length; card5++) {
+            int card2 = 0;
+            for (; card2 < inputCards.length; card2++) {
+                int card3 = 0;
+                for (; card3 < inputCards.length; card3++) {
+                    int card4 = 0;
+                    for (; card4 < inputCards.length; card4++) {
+                        int card5 = 0;
+                        for (; card5 < inputCards.length; card5++) {
                             int card1Faces = getCardValue(inputCards[card1]);
                             String card1Suit = getCardSuit(inputCards[card1]);
 
